@@ -50,7 +50,7 @@ describe('Login View', function() {
       var navbar = require('../../components/navbar/navbar.po');
 
       var helpBlock = page.form.element(by.css('.form-group.has-error .help-block'));
-      console.log(helpBlock.getText())
+      console.log(page.form)
       expect(browser.getCurrentUrl()).toBe(config.baseUrl + '/');
       expect(navbar.navbarAccountGreeting.getText()).toBe('Hello ' + testUser.name);
     });
