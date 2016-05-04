@@ -87,7 +87,7 @@ describe('Thing API:', function() {
 
   describe('GET /api/things/:id', function() {
 
-    it('should respond with 404 error', function() {
+    it('should respond with 404 error', function(done) {
       request(app)
         .get('/api/things/1000')
         .expect(404)
@@ -106,7 +106,7 @@ describe('Thing API:', function() {
   describe('PUT /api/things/:id', function() {
     var updatedThing;
 
-    beforeEach(function() {
+    beforeEach(function(done) {
       request(app)
         .put('/api/things/' + newThing._id)
         .send({
