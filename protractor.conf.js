@@ -51,7 +51,7 @@ var config = {
      * See https://github.com/detro/ghostdriver#faq
      */
     'phantomjs.ghostdriver.cli.args': ['--loglevel=DEBUG']
-  }
+  },
 
   // ----- The test framework -----
   //
