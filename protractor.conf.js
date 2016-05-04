@@ -13,9 +13,9 @@ var config = {
   baseUrl: 'http://localhost:' + (process.env.PORT || '9000'),
 
   // Credientials for Saucelabs
-  sauceUser: process.env.SAUCE_USERNAME,
-
-  sauceKey: process.env.SAUCE_ACCESS_KEY,
+  // sauceUser: process.env.SAUCE_USERNAME,
+  //
+  // sauceKey: process.env.SAUCE_ACCESS_KEY,
 
   // list of files / patterns to load in the browser
   specs: [
@@ -31,26 +31,11 @@ var config = {
   // https://code.google.com/p/selenium/wiki/DesiredCapabilities
   // and
   // https://code.google.com/p/selenium/source/browse/javascript/webdriver/capabilities.js
-  // capabilities: {
-  //   'browserName': 'chrome',
-  //   'name': 'Fullstack E2E',
-  //   'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
-  //   'build': process.env.TRAVIS_BUILD_NUMBER
-  // },
   capabilities: {
-    'browserName': 'phantomjs',
-
-    /*
-     * Can be used to specify the phantomjs binary path.
-     * This can generally be ommitted if you installed phantomjs globally.
-     */
-    'phantomjs.binary.path': require('phantomjs').path,
-
-    /*
-     * Command line args to pass to ghostdriver, phantomjs's browser driver.
-     * See https://github.com/detro/ghostdriver#faq
-     */
-    'phantomjs.ghostdriver.cli.args': ['--loglevel=DEBUG']
+    'browserName': 'chrome',
+    'name': 'Fullstack E2E'
+    // 'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
+    // 'build': process.env.TRAVIS_BUILD_NUMBER
   },
 
   // ----- The test framework -----
