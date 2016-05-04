@@ -110,12 +110,12 @@
     "wiredep": "^2.2.2"
   },
   "engines": {
-    "node": "^4.4.0",
-    "npm": "^2.14.20"
+    "node": "5.10.*",
+    "npm": "3.8.*"
   },
   "scripts": {
     "start": "node server",
-    "test": "gulp test",
+    "test": "gulp test && gulp test:e2e",
     "update-webdriver": "node node_modules/grunt-protractor-runner/node_modules/protractor/bin/webdriver-manager update"
   },
   "private": true
