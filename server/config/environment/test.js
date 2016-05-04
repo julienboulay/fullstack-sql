@@ -4,14 +4,12 @@
 // ===========================
 module.exports = {
   // MongoDB connection options
-  mongo: {
-    uri: 'mongodb://localhost/fullstacksql-test'
-  },
   sequelize: {
-    uri: 'sqlite://',
+    // uri: 'sqlite://',
+    uri: 'postgres://postgres:postgres@localhost:5432/postgres',
     options: {
       logging: false,
-      storage: 'test.sqlite',
+      // storage: 'test.sqlite',
       define: {
         timestamps: false
       }
