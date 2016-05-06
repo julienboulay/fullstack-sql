@@ -50,6 +50,7 @@ describe('Signup View', function() {
 
       var navbar = require('../../components/navbar/navbar.po');
 
+      console.log('Navbar', navbar.navbar.getInnerHtml())
       expect(browser.getCurrentUrl()).toBe(config.baseUrl + '/');
       expect(navbar.navbarAccountGreeting.getText()).toBe('Hello ' + testUser.name);
     });
