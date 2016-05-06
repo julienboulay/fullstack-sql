@@ -54,7 +54,7 @@ describe('Signup View', function() {
       expect(navbar.navbarAccountGreeting.getText()).toBe('Hello ' + testUser.name);
     });
 
-    it('should indicate signup failures', function() {
+    xit('should indicate signup failures', function() {
       page.signup(testUser);
 
       expect(browser.getCurrentUrl()).toBe(config.baseUrl + '/signup');

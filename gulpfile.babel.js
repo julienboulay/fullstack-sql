@@ -636,7 +636,7 @@ gulp.task('test:e2e', ['env:all', 'env:test', 'start:server', 'webdriver_update'
         .pipe(protractor({
             configFile: 'protractor.conf.js',
         })).on('error', err => {
-            console.log(err)
+            console.log(err);
         }).on('end', () => {
             process.exit();
         });
