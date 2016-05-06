@@ -50,9 +50,13 @@ describe('Signup View', function() {
 
       var navbar = require('../../components/navbar/navbar.po');
 
-      console.log('Navbar', navbar.navbar.getInnerHtml())
-      expect(browser.getCurrentUrl()).toBe(config.baseUrl + '/');
-      expect(navbar.navbarAccountGreeting.getText()).toBe('Hello ' + testUser.name);
+      return browser.getCurrentUrl().then(function() {
+        navbar.navbar.getInnerHtml().then(function(html) {
+        console.log('NAVBAR', html);
+        });
+        expect(browser.getCurrentUrl()).toBe(config.baseUrl + '/');
+        expect(navbar.navbarAccountGreeting.getText()).toBe('Hello ' + testUser.name);
+      });
     });
 
     xit('should indicate signup failures', function() {
